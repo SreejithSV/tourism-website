@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>book</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="book.css">
+
+</head>
+
+<body>
+
+
+  <!-- navbar -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a id="main" class="nav-link active" aria-current="page"
+              href="C:\Users\Sreejith\OneDrive\Desktop\project\2\index.html" id="menuName">Menu</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+          </li>
+        </ul>
+        <ul class="d-flex">
+
+          <a id="offers" class="nav-link active" aria-current="page" href="#">ROOMS</a>
+          <a id="stay" class="nav-link active" aria-current="page" href="#">ABOUT</a>
+          <a id="login" class="nav-link active" aria-current="page" href="#">PREPARE TO LOGIN</a>
+          <a id="sign" class="nav-link active" aria-current="page" href="#">SIGN IN</a>
+
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+  <div class="book-img">
+    <img class="img-book" src="img-book.jpg" alt="">
+    <div class="img-div">
+      <h4 class="img-h1">
+        Inn Travel of towrism
+      </h4>
+      <p class="img-p1">
+        <i class="fa-brands fa-wpforms" id="icon-all"></i>308 Watkins Lane, St. Michaels, Maryland, United States, 21663
+      </p>
+      <p class="img-p1">
+        <i class="fa-solid fa-link" id="icon-all"></i>1-410-745-2200
+      </p>
+      <p class="img-p1">
+        <i class="fa-solid fa-phone" id="icon-all"></i>
+        innatperrycabin.com
+      </p>
+    </div>
+  </div>
+
+  <h1 class="bool-room">book your room</h1> <br>
+
+  <!-- calender -->
+  
+  <center>
+  <div class="calendar">
+    <div class="header">
+        <select id="year-select"></select>
+        <select id="month-select"></select>
+    </div>
+    <div class="days">
+        <div class="day">Sun</div>
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+        <div class="day">Fri</div>
+        <div class="day">Sat</div>
+    </div>
+    <div class="dates" id="dates"></div>
+    <div id="selected-date" class="selected-date"></div>
+</div class="dates" id="dates"></div>
+</center>
+
+
+
+  <div class="gallery">
+    <div class="room-card" data-room="Standard Room" data-price="100">
+      <img src="room1.jpg" alt="Standard Room">
+      <h3>Standard Room</h3>
+      <p>$100 per night</p>
+      <button class="select-room">Select</button>
+    </div>
+    <div class="room-card" data-room="Deluxe Room" data-price="150">
+      <img src="room3.jpg" alt="Deluxe Room">
+      <h3>Deluxe Room</h3>
+      <p>$150 per night</p>
+      <button class="select-room">Select</button>
+    </div>
+    <div class="room-card" data-room="Suite" data-price="200">
+      <img src="room2.jpg" alt="Suite">
+      <h3>Suite</h3>
+      <p>$200 per night</p>
+      <button class="select-room">Select</button>
+    </div>
+  </div>
+  
+  <!-- Booking Form -->
+  <form id="booking-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <div id="selected-room-info">
+      <p>Select a room to see details here.</p>
+    </div>
+
+    <button type="submit">Book Now</button>
+  </form>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const yearSelect = document.getElementById('year-select');
+    const monthSelect = document.getElementById('month-select');
+    const datesElement = document.getElementById('dates');
+    const selectedDateElement = document.getElementById('selected-date');
+    const today = new Date();
+
+    function populateYearDropdown() {
+        for (let year = today.getFullYear() - 10; year <= today.getFullYear() + 10; year++) {
+            const option = document.createElement('option');
+            option.value = year;
+            option.textContent = year;
+            if (year === today.getFullYear()) {
+                option.selected = true;
+            }
+            yearSelect.appendChild(option);
+        }
+    }
+
+    function populateMonthDropdown() {
+        const months = [
+            'January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December'
+        ];
+        months.forEach((month, index) => {
+            const option = document.createElement('option');
+            option.value = index;
+            option.textContent = month;
+            if (index === today.getMonth()) {
+                option.selected = true;
+            }
+            monthSelect.appendChild(option);
+        });
+    }
+
+    function renderCalendar(year, month) {
+        const firstDay = new Date(year, month, 1).getDay();
+        const lastDate = new Date(year, month + 1, 0).getDate();
+        
+        datesElement.innerHTML = '';
+
+        for (let i = 0; i < firstDay; i++) {
+            datesElement.innerHTML += '<div class="date"></div>';
+        }
+
+        for (let date = 1; date <= lastDate; date++) {
+            datesElement.innerHTML += `<div class="date">${date}</div>`;
+        }
+    }
+
+    function updateCalendar() {
+        const selectedYear = parseInt(yearSelect.value);
+        const selectedMonth = parseInt(monthSelect.value);
+        renderCalendar(selectedYear, selectedMonth);
+    }
+
+    function displaySelectedDate(event) {
+        if (event.target.classList.contains('date') && event.target.textContent) {
+            const selectedYear = parseInt(yearSelect.value);
+            const selectedMonth = parseInt(monthSelect.value);
+            const selectedDay = event.target.textContent;
+            selectedDateElement.textContent = `Selected Date: ${selectedMonth + 1}/${selectedDay}/${selectedYear}`;
+        }
+    }
+
+    // Initialize dropdowns and calendar
+    populateYearDropdown();
+    populateMonthDropdown();
+    updateCalendar();
+
+    // Event listeners
+    yearSelect.addEventListener('change', updateCalendar);
+    monthSelect.addEventListener('change', updateCalendar);
+    datesElement.addEventListener('click', displaySelectedDate);
+});
+
+  </script>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tourism</title>
+
+    <style>
+        .navbar {
+    height: 80px;
+    z-index: 4;
+}
+
+#offers {
+    margin-left: auto; /* Aligns to the right */
+    padding: 8px;
+    color: #61748c;
+}
+
+#offers:hover {
+    color: #806855;
+}
+
+.iconic {
+    width: 40px;
+}
+
+#dot {
+    width: 30px;
+    font-size: 30px;
+    color: gray;
+}
+
+#stay {
+    margin-left: 20px; /* Reduced margin for better spacing */
+    background-color: #61748c;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+}
+
+#stay:hover {
+    background-color: #806855;
+}
+
+    </style>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <div class="iconic">
+                <a href="#" id="one" onclick="toggleMenu()"><i class="fa-solid fa-bars" id="dot"></i></a>
+            </div>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" id="menuName">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a id="offers" class="nav-link" href="spcl.html">Special Offers</a>
+                    <a id="stay" class="nav-link" href="book.html">Book Your Stay</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+     <title>tourism</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+  
+       <!-- side bar -->
+
+  <div class="bg-color sidebar"   style="overflow-y: scroll">
+    <div class="main-atag">
+      <a class="atag" href="alappy.html">ALAPPUZHA</a> <br> <br> <br>
+      <a class="btag" href="paris.html">PARIS</a>  <br> <br> <br>
+      <a class="ctag" href="mysore.html">MYSORE</a>  <br> <br> <br>
+      <a class="dtag" href="ooty.html">OOTY</a>  <br> <br> <br>
+      <a class="etag" href="munnar.html">MUNNAR</a>  <br> <br> <br>
+      <a class="ftag" href="idukki.html">IDUKKI</a>  <br> <br> <br>
+      <a class="gtag" href="piton.html">KANNIYAKUMARI</a>  <br> <br> <br>
+      <a class="htag" href="chik.html">CHIKKAMAGALORU</a>  <br> <br> <br>
+      <a class="itag" href="bang.html">BENGALORU</a>  <br> <br> <br>
+    </div>
+  </div>
+
+
+<!-- video -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <video class="room-img" src="room_hero_sm1.mp4" autoplay loop muted></video>
+  </div>
+
+  <div class="content-container">
+    <h1 class="shore">Your Private Cove On The <br>Eastern Shore</h1>
+  </div>
+
+  <div class="topics">
+
+    <h5 class="p-1">Check-In 4 PM | Check-Out 11 AM</h5><br>
+    <h5 class="p-2">RESERVATION HOURS</h5>
+    <h5 class="p-3">
+      Monday - Friday 8:30 AM - 7 PM <br>
+      Saturday - Sunday 9 AM - 5 PM
+    </h5>
+    <h5 class="p-4">At Inn at Perry Cabin, we understand that canines are family too! We designated rooms on the ground floor with direct outdoor access to cater to the comfort and needs of your canine.</h5>
+  </div>
+
+  <div class="card1">
+    <a class="anc-room1" href="card1.html"><img class="img-room1" src="Room1.jpg" alt=""></a>
+    <h2 class="c-1">Luxury Guest Rooms</h2> <br>
+    <h5 class="p-1">The rooms and suites of Inn at Perry Cabin have all the charm and  character you’d expect from a hotel that came to life just after the War of 1812. We've added on a bit since then and made some updates here and there, but the essence of the original...</h5>
+    <a class="a-1" href="#">read more......</a>
+   </div>
+
+   <div class="card2">
+    <a class="anc-room1" href="#"><img class="img-room2" src="Room2.jpg" alt=""></a>
+    <h2 class="c-1">Luxury Guest Suites In St. Michaels</h2> <br>
+    <h5 class="p-1">Get more room to unwind and soak up the beauty of the Eastern Shore. Sink into sumptuous armchairs in the comfort of your own living area. Relax as you look out over our sweeping grounds or let your mind wander with the gentle current of the Miles...</h5>
+    <a class="a-1" href="#">read more......</a>
+   </div>
+
+   
+
+   <div class="cal-img">
+    <img src="IPC - Jay Fleming10.2021 - 01.jpg" class="img-c" alt="">
+    <img class="map" src="IPC_0003_Map_Resize_FN1-scaled.jpg" alt="">
+    <center>
+
+    <div class="cal">
+      <h4 class="cal-h">Reserve Your Stay on <br> Maryland's Eastern Shore</h4>
+      <div class="cal-2">
+        <h5 class="cal-h-2">I would like to arrive on</h5>
+        <a class="ang-h1" href="C:\Users\Sreejith\OneDrive\Desktop\project\2\book.html"> BOOK NOW</a>
+        <br>
+        
+
+        <div class="date-picker">
+          <div class="select-wrapper">
+              <!-- Month Selection -->
+              <select id="month">
+                  <option value="">Month</option>
+                  <option value="01">January</option>
+                  <option value="02">February</option>
+                  <option value="03">March</option>
+                  <option value="04">April</option>
+                  <option value="05">May</option>
+                  <option value="06">June</option>
+                  <option value="07">July</option>
+                  <option value="08">August</option>
+                  <option value="09">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+              </select>
+              <!-- Year Selection -->
+              <select id="year">
+                  <option value="">Year</option> <br> 
+       </div>
+       </div>
+      
+      </div>
+    </div>
+  </center>
+   </div>
+  <script>                 
+    function toggleMenu() {
+const sidebar = document.querySelector('.sidebar');
+
+// Check the current display style and toggle accordingly
+if (sidebar.style.display === 'none' ) {
+  sidebar.style.display = 'flex'; // Show the sidebar
+  document.getElementById('dot').className = 'fa-solid fa-close'
+  document.getElementById('menuName').innerHTML = 'Close'
+} else {
+  sidebar.style.display = 'none'; // Hide the sidebar
+  document.getElementById('dot').className = 'fa-solid fa-bars'
+  document.getElementById('menuName').innerHTML = 'Menu'
+
+}
+}
+
+for (let year = 1900; year <= 2100; year++) {
+                        document.write('<option value="' + year + '">' + year + '</option>');
+                    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    
+   
+</body>
+</html>

@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* side bar */
+
+.bg-color {
+    background-color:#61748c;
+    width: 350px;
+    height: 100%;
+    display: none;
+    padding: 0 !important;
+    position: fixed!important;
+    top: 0;
+    overflow: auto;
+    z-index: 3;
+}
+.main-atag{
+    margin-top: 100px;
+   margin-left: 100px;
+
+}
+.atag{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.atag:hover{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+
+.btag{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btag:hover{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+.ctag{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ctag:hover{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+.dtag{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.dtag:hover{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+.etag{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.etag:hover{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+.ftag{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ftag:hover{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+.gtag{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.gtag:hover{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+.htag{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.htag:hover{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+.itag{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.itag:hover{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+/* navbar */
+
+.navbar.navbar-expand-lg {
+    height: 80px;
+    z-index: 4;
+    position: fixed;
+    width: 100%;
+}
+
+#offers{
+    margin-left: 1000px;
+    padding: 8px;
+    color: #61748c;
+
+}
+
+#offers:hover{
+    color: #806855;
+}
+
+.iconic{
+    width: 40px;
+}
+#dot{
+    width: 30px;
+    font-size: 30px;
+    color: gray;
+}
+
+#stay{
+    margin-left: 50px;
+    background-color: #61748c;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+}
+#stay:hover{
+    background-color: #806855;
+}
+
+/* video */
+
+.carousel.slide{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.room-img{
+    width: 100%;
+
+    /* paragraphs */
+}
+.content-container{
+    text-align: center;
+    width: 744px;
+    height: 195px;
+    position: absolute;
+    left: 25%;
+    top: 660px;
+    background-color: #ffffff;
+}
+.shore{
+    font-weight: lighter;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 59px;
+    margin-top: 54px;
+    color: #677a91;
+  
+}
+
+.topics{
+    text-align: center;
+    width: 744px;
+    height: 313px;
+    background-color: #ffffff;  
+    margin-left: 25%; 
+    margin-top: 70px;
+}
+
+.p-1{
+    color: #a1a1a1;
+    font-weight: lighter;
+
+}
+.p-2{
+    color: #737373;
+}
+.p-3{
+    color: #a1a1a1;
+    font-weight: lighter;
+
+}
+.p-4{
+    color: #a1a1a1;
+    font-weight: lighter;
+
+}
+/* card */
+#card-main{
+    border-radius: 35px;
+    margin-top: 50px;
+}
+.card-img-top{
+    width: 100%;
+    height: 250px;
+}
+.place{
+    text-align: center;
+    margin-top: 113px;
+    height: 57px;
+    color: black;
+    width: 100%;
+}
