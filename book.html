@@ -4,215 +4,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>book</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+  <title>Responsive Navbar</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <style>
+    /* Base styles */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    .navbar {
+      background-color: #61748c;
+    }
 
-  <link rel="stylesheet" href="book.css">
+    .navbar .nav-link {
+      color: #ffffff !important;
+      margin-right: 10px;
+    }
+    
 
+    .navbar .nav-link:hover {
+      color: #ced7e0 !important;
+    }
+
+    .navbar-toggler {
+      background-color: #fff;
+    }
+
+    .dropdown-menu {
+      background-color: #61748c;
+      border: none;
+    }
+
+    .dropdown-item {
+      color: #ffffff !important;
+    }
+
+    .dropdown-item:hover {
+      background-color: #8f7a6a;
+      color: white !important;
+    }
+
+    .navbar-brand {
+      color: white !important;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
 </head>
 
 <body>
-
-
-  <!-- navbar -->
-
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <a class="navbar-brand" href="#">Brand</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="index.html">Home</a>
+              <a class="dropdown-item" href="#">Rooms</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="about.html">About</a>
+            </div>
+          </li>
           <li class="nav-item">
-            <a id="main" class="nav-link active" aria-current="page"
-              href="index.html" id="menuName">Menu</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
-          </li>
-        </ul>
-        <ul class="d-flex">
-
-          <a id="offers" class="nav-link active" aria-current="page" href="#">ROOMS</a>
-          <a id="stay" class="nav-link active" aria-current="page" href="#">ABOUT</a>
-          <a id="login" class="nav-link active" aria-current="page" href="#">PREPARE TO LOGIN</a>
-          <a id="sign" class="nav-link active" aria-current="page" href="#">SIGN IN</a>
-
         </ul>
       </div>
     </div>
-
   </nav>
+
   <div class="book-img">
-    <img class="img-book" src="img-book.jpg" alt="">
-    <div class="img-div">
-      <h4 class="img-h1">
-        Inn Travel of towrism
-      </h4>
-      <p class="img-p1">
-        <i class="fa-brands fa-wpforms" id="icon-all"></i>308 Watkins Lane, St. Michaels, Maryland, United States, 21663
-      </p>
-      <p class="img-p1">
-        <i class="fa-solid fa-link" id="icon-all"></i>1-410-745-2200
-      </p>
-      <p class="img-p1">
-        <i class="fa-solid fa-phone" id="icon-all"></i>
-        innatperrycabin.com
-      </p>
+    <img class="img-book w-100" src="img-book.jpg" alt="Hotel Image">
+    <div class="img-overlay text-center pt-3">
+      <h4 class="img-h1">Inn Travel Tourism</h4>
+      <p class="img-p1"><i class="fa fa-map-marker-alt"></i> 308 Watkins Lane, St. Michaels, MD, 21663</p>
+      <p class="img-p1"><i class="fa fa-phone"></i> 1-410-745-2200</p>
+      <p class="img-p1"><i class="fa fa-globe"></i> innatperrycabin.com</p>
     </div>
   </div>
 
-  <h1 class="bool-room">book your room</h1> <br>
-
-  <!-- calender -->
-  
-  <center>
-  <div class="calendar">
-    <div class="header">
-        <select id="year-select"></select>
-        <select id="month-select"></select>
+  <!-- Main Content -->
+  <div class="container mt-5 pt-5">
+    <h1 class="text-center">Book Your Room</h1>
+    <br>
+    <div class="row">
+      <!-- Room Cards -->
+      <div class="col-md-4">
+        <div class="card room-card">
+          <img src="room1.jpg" class="card-img-top" alt="Standard Room">
+          <div class="card-body">
+            <h5 class="card-title">Standard Room</h5>
+            <p class="card-text">$100 per night</p>
+            <button class="btn btn-primary btn-block select-room" data-room="Standard Room" data-price="100">Select</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card room-card">
+          <img src="room3.jpg" class="card-img-top" alt="Deluxe Room">
+          <div class="card-body">
+            <h5 class="card-title">Deluxe Room</h5>
+            <p class="card-text">$150 per night</p>
+            <button class="btn btn-primary btn-block select-room" data-room="Deluxe Room" data-price="150">Select</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card room-card">
+          <img src="room2.jpg" class="card-img-top" alt="Suite">
+          <div class="card-body">
+            <h5 class="card-title">Suite</h5>
+            <p class="card-text">$200 per night</p>
+            <button class="btn btn-primary btn-block select-room" data-room="Suite" data-price="200">Select</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="days">
-        <div class="day">Sun</div>
-        <div class="day">Mon</div>
-        <div class="day">Tue</div>
-        <div class="day">Wed</div>
-        <div class="day">Thu</div>
-        <div class="day">Fri</div>
-        <div class="day">Sat</div>
-    </div>
-    <div class="dates" id="dates"></div>
-    <div id="selected-date" class="selected-date"></div>
-</div class="dates" id="dates"></div>
-</center>
-
-
-
-  <div class="gallery">
-    <div class="room-card" data-room="Standard Room" data-price="100">
-      <img src="room1.jpg" alt="Standard Room">
-      <h3>Standard Room</h3>
-      <p>$100 per night</p>
-      <button class="select-room">Select</button>
-    </div>
-    <div class="room-card" data-room="Deluxe Room" data-price="150">
-      <img src="room3.jpg" alt="Deluxe Room">
-      <h3>Deluxe Room</h3>
-      <p>$150 per night</p>
-      <button class="select-room">Select</button>
-    </div>
-    <div class="room-card" data-room="Suite" data-price="200">
-      <img src="room2.jpg" alt="Suite">
-      <h3>Suite</h3>
-      <p>$200 per night</p>
-      <button class="select-room">Select</button>
-    </div>
+    <!-- Booking Form -->
+    <form id="booking-form" class="mt-5">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+      </div>
+      <div id="selected-room-info" class="alert alert-secondary">
+        Select a room to see details here.
+      </div>
+      <button type="submit" class="btn btn-success btn-block">Book Now</button>
+    </form>
   </div>
-  
-  <!-- Booking Form -->
-  <form id="booking-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <div id="selected-room-info">
-      <p>Select a room to see details here.</p>
+  <!-- Footer -->
+  <footer class="bg-light py-4 mt-5">
+    <div class="container text-center">
+      <p>&copy; 2025 Inn Travel Tourism. All rights reserved.</p>
     </div>
+  </footer>
 
-    <button type="submit">Book Now</button>
-  </form>
-  
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const yearSelect = document.getElementById('year-select');
-    const monthSelect = document.getElementById('month-select');
-    const datesElement = document.getElementById('dates');
-    const selectedDateElement = document.getElementById('selected-date');
-    const today = new Date();
-
-    function populateYearDropdown() {
-        for (let year = today.getFullYear() - 10; year <= today.getFullYear() + 10; year++) {
-            const option = document.createElement('option');
-            option.value = year;
-            option.textContent = year;
-            if (year === today.getFullYear()) {
-                option.selected = true;
-            }
-            yearSelect.appendChild(option);
-        }
-    }
-
-    function populateMonthDropdown() {
-        const months = [
-            'January', 'February', 'March', 'April', 'May', 'June',
-            'July', 'August', 'September', 'October', 'November', 'December'
-        ];
-        months.forEach((month, index) => {
-            const option = document.createElement('option');
-            option.value = index;
-            option.textContent = month;
-            if (index === today.getMonth()) {
-                option.selected = true;
-            }
-            monthSelect.appendChild(option);
-        });
-    }
-
-    function renderCalendar(year, month) {
-        const firstDay = new Date(year, month, 1).getDay();
-        const lastDate = new Date(year, month + 1, 0).getDate();
-        
-        datesElement.innerHTML = '';
-
-        for (let i = 0; i < firstDay; i++) {
-            datesElement.innerHTML += '<div class="date"></div>';
-        }
-
-        for (let date = 1; date <= lastDate; date++) {
-            datesElement.innerHTML += `<div class="date">${date}</div>`;
-        }
-    }
-
-    function updateCalendar() {
-        const selectedYear = parseInt(yearSelect.value);
-        const selectedMonth = parseInt(monthSelect.value);
-        renderCalendar(selectedYear, selectedMonth);
-    }
-
-    function displaySelectedDate(event) {
-        if (event.target.classList.contains('date') && event.target.textContent) {
-            const selectedYear = parseInt(yearSelect.value);
-            const selectedMonth = parseInt(monthSelect.value);
-            const selectedDay = event.target.textContent;
-            selectedDateElement.textContent = `Selected Date: ${selectedMonth + 1}/${selectedDay}/${selectedYear}`;
-        }
-    }
-
-    // Initialize dropdowns and calendar
-    populateYearDropdown();
-    populateMonthDropdown();
-    updateCalendar();
-
-    // Event listeners
-    yearSelect.addEventListener('change', updateCalendar);
-    monthSelect.addEventListener('change', updateCalendar);
-    datesElement.addEventListener('click', displaySelectedDate);
-});
-
-  </script>
-
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

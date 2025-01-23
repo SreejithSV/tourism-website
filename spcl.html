@@ -19,35 +19,29 @@
 
             <!-- navbar -->
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <div class="container-fluid">
-          
-                <div class="iconic">
-                  <a href="#" id="one" onclick="toggleMenu()"><i class="fa-solid fa-bars" id="dot"></i></a>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Brand</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item px-3">
+                        <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item px-3">
+                        <a class="nav-link" href="book.html">Rooms</a>
+                      </li>
+
+                      <li class="nav-item px-3">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-          
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#" id="menuName" >Menu</a>
-                    </li>
-                  </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
-                    </li>
-                  </ul>
-                  <form class="d-flex">
-                
-                      <a id="stay" class="nav-link active" aria-current="page" href="book.html">Book Your Stay</a>
-          
-                  </form>
-                </div>
-              </div>
-              
-            </nav>
+              </nav>
                      <!-- side bar -->
 
   <div class="bg-color sidebar"   style="overflow-y: scroll">
