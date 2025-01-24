@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Your Dream Destination</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Basic page setup */
+    body {
+      background-color: #f0f8ff;
+      font-family: 'Arial', sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Background animation */
+    .bg-animated {
+      background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(0, 255, 255, 0.5));
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    @keyframes gradientAnimation {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    /* Text animation */
+    .animated-text {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #4CAF50;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInSlideUp 2s forwards;
+    }
+
+    /* Keyframes for the header animation */
+    @keyframes fadeInSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Cards Section */
+    .card {
+      transform: scale(0.9);
+      opacity: 0;
+      animation: fadeInZoom 1s forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Cards animation */
+    @keyframes fadeInZoom {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Stagger the card animations */
+    .card:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+    .card:nth-child(2) {
+      animation-delay: 1s;
+    }
+    .card:nth-child(3) {
+      animation-delay: 1.5s;
+    }
+    .card:nth-child(4) {
+      animation-delay: 2s;
+    }
+
+    /* Style for the card images */
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+.btn-custom {
+  background-color: #67517b;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; /* Initially invisible */
+  animation: fadeInScaleUp 1.5s forwards, gradientAnimation 15s ease infinite; /* Combined animations */
+}
+
+/* Button Hover Effect */
+.btn-custom:hover {
+  transform: translateY(-5px);
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Keyframes for the button initial animation (fade in + scale up) */
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Existing gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background: #61748c;
+  }
+  50% {
+    background: #61748c;
+  }
+  100% {
+    background: #61748c;
+  }
+}
+
+
+    /* Style for the icons inside cards */
+    .card-icon {
+      font-size: 3rem;
+      color: #4CAF50;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover .card-icon {
+      transform: rotate(15deg);
+    }
+
+    /* Style for the card text */
+    .card-body {
+      text-align: center;
+    }
+
+    /* Media Query for smaller screens */
+    @media (max-width: 768px) {
+      .card {
+        margin-bottom: 20px;
+      }
+    }
+    .navbar {
+      background-color: #61748c;
+    }
+
+    .navbar .nav-link {
+      color: #ffffff !important;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+    <nav  class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  More..
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="index.html">Home</a>
+                  <a class="dropdown-item" href="book.html">Book Your Rooms</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="about.html">About</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="spcl.html">Special for You</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> <br><br><br><br>
+
+  <!-- Background Animation -->
+  <div class="bg-animated"></div>
+
+  <!-- Header Section -->
+  <div class="container text-center">
+    <h1 class="animated-text">Welcome to</h1>
+    <h2 class="animated-text">Your Dream Destination</h2>
+    <p class="animated-text">Discover the world's most amazing places.</p>
+    <a href="book.html" class="btn-custom">Explore Now</a>
+    <br><br><br>
+  </div>
+
+  <!-- Cards Section -->
+  <div id="explore" class="container">
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card shadow-lg">
+          <i class="card-icon fas fa-sun"></i>
+          <img src="b1.jpg" style="border: 2px solid white;" class="card-img-top" alt="Tropical Beach">
+          <div class="card-body">
+            <h5 class="card-title">Tropical Paradise</h5>
+            <p class="card-text">Escape to the sun-drenched beaches and clear waters and sunshines.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card shadow-lg">
+          <i class="card-icon fas fa-mountain"></i>
+          <img src="b2.jpg" style="border: 2px solid white;" class="card-img-top" alt="Mountain Adventures">
+          <div class="card-body">
+            <h5 class="card-title">Mountain Adventures</h5>
+            <p class="card-text">Hike through breathtaking mountain ranges and conquer peaks.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card shadow-lg">
+          <i class="card-icon fas fa-building"></i>
+          <img src="b3.jpg" style="border: 2px solid white;" class="card-img-top" alt="Cultural Escapes">
+          <div class="card-body">
+            <h5 class="card-title">Cultural Escapes</h5>
+            <p class="card-text">Immerse yourself in the world's most iconic cities and heritage sites.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card shadow-lg">
+          <i class="card-icon fas fa-campground"></i>
+          <img src="b4.jpg" style="border: 2px solid white;" class="card-img-top" alt="Desert Adventure">
+          <div class="card-body">
+            <h5 class="card-title">Desert Getaway</h5>
+            <p class="card-text"> More Explore the serenity and vastness of majestic modern deserts.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <footer class="text-center bg-light pt-3">
+    <p>&copy; 2025 Inn Travel Tourism. All rights reserved.</p>
+  </footer>
+
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
